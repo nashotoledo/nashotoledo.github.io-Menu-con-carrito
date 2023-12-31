@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    list-style: none;
+}
+/*===================== BODY =====================*/
+body {
+    background-image: url(/img/fondo1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    height: 20em;
+}
+
+/*===============================================*/
+/*================== HEADER =====================*/
+
+header {
+    position: fixed;
+    background-color:#000000d4;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-container {
+    position: fixed;
+    width: 100%;
+    height: 150px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 20px;
+}
+
+.logo {
+    max-width: 8rem;
+    transition: all .50s ease;
+}
+
+.logo:hover {
+    transform: translateY(-5px);
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-list li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #ffffff;
+    position: relative;
+}
+
+
+.nav-list li a::after {
+    content: "";
+    background-color: #ffffff;
+    position: absolute;
+    left: 0;
+    top: calc(100% + 4px);
+    width: 100%;
+    height: 1.9px;
+    border-radius: 50px;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-list li a.selected::after,
+.nav-list li a:hover::after{
+    opacity: .8;
+}
+
+.nav-list li a:hover {
+    color: #7c7c7c;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
+.nav-list li a i {
+    display: none;      
+}
+
+.carrito {
+    border: 0;
+    background-color: transparent;
+    color: #d4d4d4;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+
+
+/*===============================================*/
+/*============ espacio final de pagina ==========*/
+.espacio {
+    height: 150px;
+    width: 100%;
+}
+
+/*======================Main========================*/
+
+.main{
+    width: 100%;
+    height: calc(100vh - 150px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1{
+    width: 15vw;
+    height: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-main img {
+    width: 100%;
+    transition: all .50s ease;
+}
+
+.logo-main img:hover {
+    transform: translateY(-5px);
+    opacity: 0.7;
+}
+
+.icons {
+    position: fixed;
+    right: 2%;
+    top: 55%;
+    padding: 0 1%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+.icons i {
+    display: block;
+    margin: 26px 0;
+    font-size: 30px;
+    color: #ffffff;
+    transition: all .50s ease;
+}
+.icons i:hover {
+    color: #7c7c7c;
+    transform: translateY(-5px);
+}
+
+.scroll-down {
+    position: fixed;
+    bottom: 6%;
+    right: 2%;
+    z-index: 5;
+}
+
+.scroll-down i {
+    display: block;
+    padding: 10px;
+    font-size: 25px;
+    color: #fefefe;
+    background: #737373;
+    border-radius: 50px;
+    transition: all .5s ease;
+}
+
+.scroll-down i:hover {
+    transform: translateY(-5px);
+    color: #1d1d1d;
+    opacity: 0.7;
+}
+/*===============================================*/
+
+
+/*===============================================*/
+/*=================== SECTION ===================*/
+
+
+
+.section-back {
+    min-height: 100%;
+    background: rgba(163, 163, 163, 0);
+    display: flex;
+    justify-content: center;
+}
+
+/*===============================================*/
+/*==================== MAIN =====================*/
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 23px;
+    color: white;
+}
+/*===============================================*/
+
+.contenedor img {
+    width: 320px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 20px;
+}
+.contenedor>div{
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #858585;
+    border-radius: 20px;
+}
+.contenedor>div:hover{
+    background-color: #3f3f3f;
+}
+
+.informacion{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:15px;
+}
+.informacion>p:first-child{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
+}
+.informacion .precio {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+.informacion .precio span{
+    font-size: 17px;
+    font-weight: 300;
+}
+.informacion button{
+    background-color: #5e0101;
+    color: white;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+
+    font-size: 17px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.informacion button:hover{
+    background-color: #a10101;
+}
+
+.infromacio button:active{
+    background-color: white;
+    color: black;
+}
+
+.diseñoNumero {
+    padding: 10px;
+    background-color: #7e0000;
+    color: white;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    position: relative;
+    top: -40px;
+
+    left: 30px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedorCompra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
+    flex-direction:column;
+    gap: 35px;
+    z-index: 1000;
+}
+
+.informacionCompra{
+    width: 70%;
+    height: 70%;
+    max-width: 450px;
+    background-color: #d3d3d3;
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+}
+
+.informacionCompra h2{
+    font-weight: 300;
+    margin: 20px 0px 0px 10px;
+    font-size: 32px;
+    width: 100%;
+}
+
+.x{
+    padding-top: 15px;
+    padding-right: 3%;
+    cursor: pointer;
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+}
+
+.productosCompra{
+    font-size: 17px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 350px;
+    height: 30%;
+    overflow-y: auto;
+    margin-top: 50px;
+}
+
+.productosCompra > div {
+    margin: 0px 45px;
+    padding: 20px 0px;
+    width: auto;
+    border-bottom: 1px dotted black;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.productosCompra img{
+    width: 25px;
+    height: auto;
+    margin-right:10px;
+    border-bottom: none ;
+    cursor: pointer;
+}
+
+.total{
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 100px;
+    font-size: 100%;
+    font-weight: 700;
+}
+
+.total span{
+    font-weight: 300;
+}
+
+.contenedorCompra > button{
+    z-index: 1;
+    background-color: #5e0101;
+    color: white;
+    width: 50%;
+    height: 45px;
+    border-radius: 10px ;
+    border: none;
+    max-width: 350px;
+
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.contenedorCompra > button:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+
+.none>div,
+.none button, 
+.none p{
+    width: 0px;
+    height: 0px;
+    font-size: 0px;
+    border: 0px;
+}
+
+.soldOut{
+    background-color: #000000;
+    padding: 7px 10px;
+    border-radius: 10px;
+    color: white;
+}
+.botonTrash{
+    background-color: rgba(255, 1, 1, 0);
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.botonTrash img {
+    width: 20px;
+}
+
+/*===============================================*/
+/*================== FOOTER =====================*/
+
+.footer{
+    background-color: rgb(153, 153, 153);
+    width: 100%;
+    height: 230px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-footer {
+    background-color: rgba(146, 146, 146, 0);
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    padding: 12px 0;
+}
+
+.container-footer .social {
+    text-align: center;
+}
+
+.container-footer .social a {
+    font-size: 24px;
+    color: inherit;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+    margin: 0 8px;
+    opacity: .5;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.container-footer .social a:hover {
+    opacity: .9;
+    transition: .3s;
+}
+
+.container-footer .footer-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container-footer .footer-logo  img {
+    height: 120px;
+    width: auto;
+    opacity: .65;
+    transition: .3s;
+}
+
+.container-footer .footer-logo .mercado-pago{
+    height: 50px;
+    margin-right: 2%;
+}
+
+.container-footer .footer-logo  img:hover {
+    opacity: 1;
+    transition: .2s;
+}
+
+.footer-logo i {
+    font-size: 50px;
+    opacity: .6;
+    transition: .3s;
+    margin-left: 2%;
+}
+
+.footer-logo i:hover {
+    opacity: 1;
+    transition: .2s;
+}
+
+.container-footer .copyright {
+    text-align: center;
+    font-size: 13px;
+    color: #000000;
+}
+
+
+/*===============================================*/
+/*===============================================*/
+
+@media screen and (max-width: 770px) {
+
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .abrir-menu {
+        color: #ffffff;
+        font-size: 2.5rem;
+    }
+
+    .cerrar-menu {
+        margin-top: 1.5rem;
+        color: #ececec;
+        font-size: 2rem;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #8f8f8f;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0,0,0,.5);
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        position: fixed;
+        overflow-y: auto;
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+        margin-left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .nav-list li a {
+        color: #ececec;
+    }
+    
+    .nav-list li a::after {
+        content: none;
+    }
+    
+    .nav-list li a.selected,
+    .nav-list li a:hover {
+        color: #2f2f2f;
+    }
+    
+    .nav-list li a i {
+        display: contents;      
+    }
+
+    .productosCompra{
+        
+        width: 300px;
+        margin-top: 50px;
+    }
+
+    /*=============================================*/
+
+    .logo-main img {
+        width: 90%;
+        transition: .2s;
+    }
+
+    .icons {
+        padding: 0 1%;
+        transition: .2s;
+    }
+    .scroll-down {
+        right: 2%;
+        transition: .2s;
+    }
+
+
+}
